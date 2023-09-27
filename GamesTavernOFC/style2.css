@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+
+body{
+    height: 100vh;
+    background-image: url(asteroid.jpg);
+    
+    
+}
+
+#logo{   
+    color:white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+    padding-left: 70px;
+    padding-top: 5px;
+    height: 120px;    
+    text-shadow: 10px 10px 5px black;
+}
+
+#argola{
+    padding-bottom: 0px;
+}
+
+
+#formulario{
+    text-align: center;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#nome{
+    border-radius: 15px;
+    height: 30px;
+    border-style: none;
+    background-color: blanchedalmond;
+}
+
+#senha{
+    border-radius: 15px;
+    height: 30px;
+    border-style: none;
+    background-color: blanchedalmond;
+}
+
+#email{
+    border-radius: 15px;
+    height: 30px;
+    border-style: none;
+    background-color: blanchedalmond;
+}
+
+#data{
+    border-radius: 15px;
+    height: 30px;
+    border-style: none;
+    background-color: blanchedalmond;
+}
+
+#botao
+{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    border-radius: 15px;
+    height: 45px;
+    width: 300px;
+    border-style: none;
+    background-color: blanchedalmond;
+}
+
+#voltar{
+    padding-left: 1300px;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.box {
+    border: 1px solid white;
+    border-radius: 5px;
+    max-width: 500px;
+    padding: 30px;
+    margin: auto;
+
+}
+
+
+
+
+
+

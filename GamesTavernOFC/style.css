@@ -1,0 +1,360 @@
+ @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    /*utilizamos flexbox e responsividade nesta página, mídias no final do documento*/
+
+body{
+
+    background-image: url(space2.jpg);
+    background-size: 100%;   
+    width: 99vw;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 30%;
+    padding-bottom: 10%;
+}
+
+#logomario{
+    width: 100%;
+    padding-bottom: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#logocup{
+    width: 100%;
+    padding-bottom: 10%;
+    margin-right: 50%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#logomine{
+    width: 100%;
+    padding-bottom: 10%;
+    padding-right: 20%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#logosonic{
+    width: 100%;
+    padding-bottom: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+#imagem{
+    width: 20%;
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#inicio1{
+    width: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#inicio2{
+    width: 150%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+header{    
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    padding-left: 30px;
+    padding-top: 20px;
+    height: 25%;
+    border-radius: 20px;
+    text-shadow: 10px 10px 5px black;
+}
+
+
+#cadastro{
+    font-size: 30px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+a{
+    text-decoration: none;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div1{
+    font-family: 'Bebas Neue', sans-serif;  
+    color: rgba(rgb(114, 21, 21), rgb(87, 236, 87), rgb(93, 93, 247), 0.2);
+    text-align: justify;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border: solid;
+    border-radius: 30px;
+    background-color: white;
+    opacity: 0.5;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 20px;
+    
+    
+}
+
+#titulo{
+    font-family: 'PT Sans', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+}
+
+#logo:hover{
+    padding-left: 70px;
+    transform: scale(1.1);
+}
+
+#logopoke{
+    width: 70%;
+    padding-bottom: 10%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.logopoke:hover{
+    padding-left: 70px;
+    transform: scale(1.1);
+}
+
+
+
+#textomine
+{
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    text-align: center; 
+}
+
+
+#teste{
+
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+table{
+    border: solid;
+    border-color: rgb(231, 231, 231);
+    border-radius: 50px;
+    background-color: white;
+    margin-left: 40px;
+    justify-content: center;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+#jogos{
+    padding-top: 7%;
+    padding-bottom: 7%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#gif{
+    display: flex;
+}
+
+
+/*LAPTOP*/
+
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    #jogos{
+        display: none;
+    }
+
+    #texto{
+        font-size: 18px;
+        padding-left: 30px;
+    }
+
+    #gif{
+        display: none;
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #inicio1{
+        width: 15%;
+    }
+
+    #inicio2{
+        width: 100%;
+    }
+}
+
+/*TABLET*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    #jogos{
+        display: none;
+    }
+
+    #div1{
+        width: 90vw;
+        font-size: 10PX;
+    }
+
+    #gif{
+        display: none;
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #inicio1{
+        width: 15%;
+    }
+
+    #inicio2{
+        width: 100%;
+    }
+
+    #imagem{
+        width: 35%;
+    }
+}
+
+/*CELULAR*/
+
+@media screen and (min-width: 480px) and (max-width: 544px){
+   
+    body{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    #jogos{
+        display: none;
+    }
+
+    #tabela1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .inicio{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #inicio1{
+        width: 15%;
+    }
+
+    #inicio2{
+        width: 100%;
+    }
+
+    table{
+        scale: 70%;
+        padding: 0px;
+    }
+
+    #gif{
+        display: none;
+    }
+
+    #imagem{
+        width: 35%;
+    }
+
+    #titulo{
+        font-size: 40px;
+    }
+}
+
+/*IMPRIMIR*/
+
+@media print {
+
+    #cadastro{
+        display: none;
+    }
+
+    #jogos{
+        display: none;
+    }
+
+    .div1{
+        border: none;
+    }
+
+    #gif{
+        display: none;
+    }
+
+    #imagem{
+        display: none;
+    }
+
+    .inicio{
+        display: none;
+    }
+}
