@@ -8,6 +8,7 @@ package testehibernate;
 import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.Session;
+import org.hibernate.query.Query;
 import util.HibernateUtil;
 
 /**
@@ -34,6 +35,14 @@ public class TesteHibernate2 {
             Professor prof1 = new Professor(1,"Roffato",5000);
             Professor prof2 = new Professor(2,"Xandão",10000);
             Professor prof3 = new Professor(3,"Rosana",10);
+            List<Disciplina> listaDisc = new ArrayList<Disciplina>();
+            listaDisc.add(disc1);
+            listaDisc.add(disc2);
+            prof1.setListaDisc(listaDisc);
+
+            List<Disciplina> listaDisc2 = new ArrayList<Disciplina>();
+            listaDisc2.add(disc3);
+            prof2.setListaDisc(listaDisc2);
 
             //cria departamentos
             Departamento dep1 = new Departamento(1,"Contabilidade");
@@ -68,7 +77,61 @@ public class TesteHibernate2 {
 
             session.getTransaction().commit();
         
+            String hql = "from Professor";
+            Query query = session.createQuery(hql);
+            List<Professor> result = query.list();
+            System.out.println("_________________________________________________");
+            System.out.println("\nPROFESSORES\n\n");
+            for(Professor prof: result)
+            {
+                    System.out.println("\nCódigo: " + prof.getCodigo() + "\nNome: " + prof.getNome() + "\nSalário: " + prof.getSalario());
+                    System.out.println("\n_________________________________________________");
+            }
 
+            String hql2 = "from Aluno";
+            Query query2 = session.createQuery(hql2);
+            List<Aluno> result2 = query2.list();
+            System.out.println("_________________________________________________");
+            System.out.println("\nALUNOS\n\n");
+            for(Aluno al: result2)
+            {
+                    System.out.println("\nRA: " + al.getRa() + "\nNome: " + al.getNome());
+                    System.out.println("\n_________________________________________________");
+            }
+
+            String hql3 = "from Disciplina";
+            Query query3 = session.createQuery(hql3);
+            List<Disciplina> result3 = query3.list();
+            System.out.println("_________________________________________________");
+            System.out.println("\nDISCIPLINAS\n\n");
+            for(Disciplina disc: result3)
+            {
+                    System.out.println("\nCódigo: " + disc.getCodigo() + "\nDescrição: " + disc.getDescricao() + "\nCarga Horária: " + disc.getCargaHoraria());
+                    System.out.println("\n_________________________________________________");
+            }
+
+            String hql4 = "from Funcionario";
+            Query query4 = session.createQuery(hql4);
+            List<Funcionario> result4 = query4.list();
+            System.out.println("_________________________________________________");
+            System.out.println("\nFUNCIONÁRIOS\n\n");
+            for(Funcionario func: result4)
+            {
+                    System.out.println("\nID: " + func.getId() + "\nNome: " + func.getNome() + "\nSalário: " + func.getSalario());
+                    System.out.println("\n_________________________________________________");
+            }
+
+            String hql5 = "from Departamento";
+            Query query5 = session.createQuery(hql5);
+            List<Departamento> result5 = query5.list();
+            System.out.println("_________________________________________________");
+
+            System.out.println("\nDEPARTAMENTOS\n\n");
+            for(Departamento dep: result5)
+            {
+                    System.out.println("\nCódigo: " + dep.getCod() + "\nNome: " + dep.getNome());
+                    System.out.println("\n_________________________________________________");
+            }
 
         session.close();
         HibernateUtil.shutdown();
