@@ -1,0 +1,15 @@
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\bin\Debug\BioSearchDesign.exe.config
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\bin\Debug\BioSearchDesign.exe
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\bin\Debug\BioSearchDesign.pdb
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.csproj.AssemblyReference.cache
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form1.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Properties.Resources.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.csproj.GenerateResource.cache
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.csproj.CoreCompileInputs.cache
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.exe
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.pdb
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form2.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form3.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form4.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form5.resources
+C:\Users\mupin\source\repos\BioSearchDesign\BioSearchDesign\obj\Debug\BioSearchDesign.Form6.resources
