@@ -1,7 +1,7 @@
-package com.example.demoApi4.controller;
+package com.example.demoApi5.controller;
 
-import com.example.demoApi4.model.Aluno;
-import com.example.demoApi4.repository.AlunoRepository;
+import com.example.demoApi5.model.Aluno;
+import com.example.demoApi5.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/apiAluno")
-public class AlunoController {
+public class AlunoControl {
 
     @Autowired
     AlunoRepository alrepo;
