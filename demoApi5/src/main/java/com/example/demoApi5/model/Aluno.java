@@ -16,6 +16,9 @@ public class Aluno {
         @Column
         private String nome;
 
+        @Column
+        private double altura;
+
         public int getRa() {
             return ra;
         }
@@ -31,4 +34,12 @@ public class Aluno {
         public void setNome(String nome) {
             this.nome = nome;
         }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
 }
