@@ -17,9 +17,9 @@ public class DisciplinaControl {
     DisciplinaRepository discRepo;
 
     @GetMapping("/todos")
-    public void buscarDisciplinas()
+    public List<Disciplina> buscarDisciplinas()
     {
-        discRepo.findAll();
+        return discRepo.findAll();
     }
 
     @GetMapping("/todos/codigo/{codigo}")
@@ -45,4 +45,47 @@ public class DisciplinaControl {
     {
         return discRepo.findBySigla(sigla);
     }
+
+    @PostMapping("/inserir")
+    public void inserirDisciplina(@RequestBody Disciplina disc)
+    {
+        discRepo.save(disc);
+    }
+
+    @DeleteMapping("/remover")
+    public void removerDisciplina(@RequestBody Disciplina disc)
+    {
+        discRepo.delete(disc);
+    }
+
+    @DeleteMapping("/remover/codigo/{codigo}")
+    public void removerDisciplinaPorId(@PathVariable("codigo") int codigo)
+    {
+        discRepo.deleteById(codigo);
+    }
+
+    @PutMapping("/atualizar")
+    public void atualizarDisciplina(@RequestBody Disciplina disc)
+    {
+        discRepo.save(disc);
+    }
+
+    @GetMapping("/todos/siglaCod/{sigla}/{codigo}")
+    public List<Disciplina> buscarPorSiglaCodigo(@PathVariable("sigla") String sigla, @PathVariable("codigo") int codigo)
+    {
+        return discRepo.findBySiglaCod(sigla, codigo);
+    }
+
+    @GetMapping("/todos/nomeCod/{nome}/{codigo}")
+    public List<Disciplina> buscarPorNomeCodigo(@PathVariable("nome") String nome, @PathVariable("codigo") int codigo)
+    {
+        return discRepo.findByNomeCod(nome, codigo);
+    }
+
+    @GetMapping("/todos/siglaNome/{sigla}/{nome}")
+    public List<Disciplina> buscarPorSiglaNome(@PathVariable("sigla") String sigla, @PathVariable("nome") String nome)
+    {
+        return discRepo.findBySiglaNome(sigla, nome);
+    }
+
 }

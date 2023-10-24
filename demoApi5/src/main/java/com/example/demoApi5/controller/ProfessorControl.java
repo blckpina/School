@@ -62,4 +62,16 @@ public class ProfessorControl {
     {
         prrepo.save(pr);
     }
+
+    @GetMapping("/todos/nomeIdade/{nome}/{idade}")
+    public List<Professor> buscarPorNomeIdade(@PathVariable("nome") String nome, @PathVariable("idade") int idade)
+    {
+        return prrepo.findByNomeIdade(nome, idade);
+    }
+
+    @GetMapping("/todos/nomeNe/{nome}/{ne}")
+    public List<Professor> buscarPorNomeNe(@PathVariable("nome") String nome, @PathVariable("ne") int ne)
+    {
+        return prrepo.findByNomeNe(nome, ne);
+    }
 }

@@ -13,5 +13,17 @@ public interface AlunoRepository extends JpaRepository<Aluno, Integer> {
     List<Aluno> findByAltura(double altura);
 
     @Query("select a from Aluno a where a.nome like %?1%")
-    List<Aluno> findByParteNome (String parteNome);
+    List<Aluno> findByParteNome(String parteNome);
+
+    @Query("select a from Aluno a where a.ra > ?1")
+    List<Aluno> findByMaiorQue(int ra);
+
+    @Query("select a from Aluno a where a.altura < ?1")
+    List<Aluno> findByMenorQue(double altura);
+
+    @Query("select a from Aluno a where a.nome like %?1% and a.ra > ?2")
+    List<Aluno> findByNomeRa(String nome, int ra);
+
+    @Query("select a from Aluno a where a.nome like %?1% and a.altura < ?2")
+    List<Aluno> findByNomeAltura(String nome, double altura);
 }

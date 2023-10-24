@@ -68,4 +68,28 @@ public class AlunoControl {
     {
         return alrepo.findByParteNome(parteNome);
     }
+
+    @GetMapping("/todos/raMaiorQue/{ra}")
+    public List<Aluno> buscarRaMaiorQue(@PathVariable("ra") int ra)
+    {
+        return alrepo.findByMaiorQue(ra);
+    }
+
+    @GetMapping("/todos/alturaMenorQue/{altura}")
+    public List<Aluno> buscarAlturaMenorQue(@PathVariable("altura") double altura)
+    {
+        return alrepo.findByMenorQue(altura);
+    }
+
+    @GetMapping("/todos/nomeRa/{nome}/{ra}")
+    public List<Aluno> buscarPorNomeRa(@PathVariable("nome") String nome, @PathVariable("ra") int ra)
+    {
+        return alrepo.findByNomeRa(nome, ra);
+    }
+
+    @GetMapping("/todos/nomeAltura/{nome}/{altura}")
+    public List<Aluno> buscarPorNomeAltura(@PathVariable("nome") String nome, @PathVariable("altura") double altura)
+    {
+        return alrepo.findByNomeAltura(nome, altura);
+    }
 }
