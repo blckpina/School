@@ -44,4 +44,22 @@ public class ProfessorControl {
     {
         prrepo.save(pr);
     }
+
+    @DeleteMapping("/remover")
+    public void removerProf(@RequestBody Professor pr)
+    {
+        prrepo.delete(pr);
+    }
+
+    @DeleteMapping("/remover/ne/{ne}")
+    public void removerPorNe(@PathVariable("ne") int ne)
+    {
+        prrepo.deleteById(ne);
+    }
+
+    @PutMapping("/atualizar")
+    public void atualizarProf(@RequestBody Professor pr)
+    {
+        prrepo.save(pr);
+    }
 }

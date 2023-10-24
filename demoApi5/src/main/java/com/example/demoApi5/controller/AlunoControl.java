@@ -44,4 +44,28 @@ public class AlunoControl {
     {
         alrepo.save(al);
     }
+
+    @DeleteMapping("/remover")
+    public void removerAluno(@RequestBody Aluno al)
+    {
+        alrepo.delete(al);
+    }
+
+    @DeleteMapping("/remover/ra/{ra}")
+    public void removerAlunoPorId (@PathVariable("ra") int ra)
+    {
+        alrepo.deleteById(ra);
+    }
+
+    @PutMapping("/atualizar")
+    public void atualizarAluno(@RequestBody Aluno al)
+    {
+        alrepo.save(al);
+    }
+
+    @GetMapping("/todos/parteNome/{parteNome}")
+    public List<Aluno> buscarPorParteNome(@PathVariable("parteNome") String parteNome)
+    {
+        return alrepo.findByParteNome(parteNome);
+    }
 }
