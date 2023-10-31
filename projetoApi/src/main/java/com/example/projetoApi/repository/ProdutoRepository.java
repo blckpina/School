@@ -14,7 +14,6 @@ public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
     @Query("Select a from Produto a where a.preco < ?1")
     List<Produto> findByPrecoMenor(double preco);
 
-    @Query("Select a from Produto a where a.marca like %?1%")
     List<Produto> findByMarca(String marca);
 
     @Query("Select a from Produto a where a.marca like %?1% and a.preco < ?2")

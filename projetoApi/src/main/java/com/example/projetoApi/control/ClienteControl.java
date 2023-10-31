@@ -39,7 +39,7 @@ public class ClienteControl {
         return clRepo.findByEmail(email);
     }
 
-    @GetMapping("/todos/parteNomeEmail{parteNome}/{parteEmail}")
+    @GetMapping("/todos/parteNomeEmail/{parteNome}/{parteEmail}")
     public List<Cliente> buscarPorParteNomeEmail(@PathVariable("parteNome") String parteNome, @PathVariable("parteEmail") String parteEmail)
     {
         return clRepo.findByParteNomeEmail(parteNome, parteEmail);
