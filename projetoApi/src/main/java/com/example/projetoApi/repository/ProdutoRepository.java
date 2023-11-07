@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ProdutoRepository extends JpaRepository<Produto, Integer> {
 
-    @Query("Select a from Produto a where a.descricao like %?1%")
+    @Query("Select a from Produto a where a.descricao like ?1%")
     List<Produto> findByParteDescricao(String parteDescricao);
 
     @Query("Select a from Produto a where a.preco < ?1")

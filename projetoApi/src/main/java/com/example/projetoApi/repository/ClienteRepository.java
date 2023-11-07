@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Integer> {
 
-    @Query("Select a from Cliente a where a.nome like %?1%")
+    @Query("Select a from Cliente a where a.nome like ?1%")
     List<Cliente> findByParteNome(String parteNome);
 
     List<Cliente> findByEmail(String email);
